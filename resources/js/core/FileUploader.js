@@ -1,5 +1,5 @@
-// eslint-disable-next-line no-underscore-dangle,no-unused-vars
-// const cropperModal = new Modal('cropImageModal');
+import {Modal} from "./Modal.js";
+
 const cropperModal = new Modal('cropImageModal');
 
 class FileUploader {

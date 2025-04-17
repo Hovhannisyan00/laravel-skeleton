@@ -15,8 +15,8 @@ $(function () {
 
   minimizeMenu();
 });
-
-showSuccessMessage = function (message) {
+window.showSuccessMessage = function (message) {
+  alert(1111, 'successss mesageeeee')
   $.toast({
     text: message,
     hideAfter: 2000,
@@ -28,7 +28,7 @@ showSuccessMessage = function (message) {
   });
 };
 
-showErrorMessage = function (message) {
+window.showErrorMessage = function (message) {
   $.toast({
     heading: 'Error',
     hideAfter: 2000,
@@ -40,13 +40,37 @@ showErrorMessage = function (message) {
     allowToastClose: false,
   });
 };
-
-select2Init = function (div = undefined, className = 'select2') {
+// function showSuccessMessage(message) {
+//   $.toast({
+//     text: message,
+//     hideAfter: 2000,
+//     position: 'top-right',
+//     stack: false,
+//     loader: false,
+//     icon: 'success',
+//     allowToastClose: false,
+//   });
+//
+// };
+// function showErrorMessage(message) {
+//   $.toast({
+//     heading: 'Error',
+//     hideAfter: 2000,
+//     text: message,
+//     position: 'top-right',
+//     stack: false,
+//     loader: false,
+//     icon: 'error',
+//     allowToastClose: false,
+//   });
+//
+// };
+function select2Init (div = undefined, className = 'select2') {
   let select2 = $(`select.${className}`);
   if (typeof div !== 'undefined') {
     select2 = div.find(`select.${className}`);
-  }
 
+  }
   $.each(select2, function () {
     $(this).select2({
       placeholder: $trans('__dashboard.select.option.default'),
@@ -55,35 +79,36 @@ select2Init = function (div = undefined, className = 'select2') {
       allowClear: $(this).data('allow-clear') || false,
     });
   });
-};
 
-select2Reset = function (select) {
+};
+function select2Reset(select) {
   if (select.length) {
     select.select2('val', '');
     select.find('option').not(':first-child').remove();
   }
-};
 
-select2SetValues = function (select, data) {
+};
+function select2SetValues (select, data) {
   $.each(data, (key, value) => {
     select.append(new Option(value, key, false, false)).trigger('change.select2');
   });
-};
 
-disableField = function (field, disable) {
+};
+function disableField(field, disable) {
   if (typeof disable === 'undefined') {
     disable = true;
+
   }
-
   field.prop('disabled', disable);
-};
 
-loadContent = function (content, removeLoad) {
+};
+function loadContent (content, removeLoad) {
   if (typeof removeLoad === 'undefined') {
     content.addClass('loading-content position-relative');
   } else {
     content.removeClass('loading-content position-relative');
   }
+
 };
 
 function minimizeMenu() {
@@ -95,8 +120,8 @@ function minimizeMenu() {
     $('.open-menu').toggleClass('open-menu-opened');
   });
 }
-
 // ClassicEditor
+
 function ckEditorInit() {
   const ckeditorEls = document.querySelectorAll('.ckeditor5');
 

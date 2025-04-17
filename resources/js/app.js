@@ -1,6 +1,8 @@
-require('./core/bootstrap');
+import './core/bootstrap';
+import { createApp } from 'vue';
 
-window.Vue = require('vue').default;
+const app = createApp({});
+app.mount('#app');
 
 /**
  * The following block of code may be used to automatically register your
@@ -21,6 +23,3 @@ window.Vue = require('vue').default;
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
-  el: '#app',
-});

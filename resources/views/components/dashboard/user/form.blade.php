@@ -1,6 +1,7 @@
 <x-dashboard.layouts.app>
     <x-slot name="head">
         <link rel="stylesheet" href="{{ asset('/plugins/croppie/croppie.min.css') }}" />
+        @vite('resources/js/bundle.js')
     </x-slot>
 
     <div class="container-fluid">
@@ -63,6 +64,6 @@
 
     <x-slot name="scripts">
         <script src="{{ asset('/plugins/croppie/croppie.min.js') }}"></script>
-        <script src="{{ asset('/js/dashboard/user/main.js') }}"></script>
+        @vite('resources/js/dashboard/crud/user/main.js')
     </x-slot>
 </x-dashboard.layouts.app>

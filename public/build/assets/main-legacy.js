@@ -1,0 +1,2 @@
+System.register(["./FormRequest-legacy.js","./Modal-legacy.js"],(function(e,t){"use strict";var n,a;return{setters:[e=>{n=e.F},e=>{a=e.M}],execute:function(){new n;const e=new a("infoModal");$((function(){e.afterShow((function(){})),e.afterHide((function(){})),e.save((function(t){e.getModalElement(),alert("Saved!"),e.hide()})),e.cancel((function(t){e.getModalElement(),alert("Canceled!")}))}))}}}));
+//# sourceMappingURL=main-legacy.js.map

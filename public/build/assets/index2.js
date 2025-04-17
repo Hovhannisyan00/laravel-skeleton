@@ -1,0 +1,2 @@
+import{D as a}from"./DataTable2.js";function e(){import.meta.url,import("_").catch(()=>1),async function*(){}().next()}alert(11212121212121213e4+"aaaaaaa");const t={pathOptions:{searchPath:route("dashboard.users.getListData"),deletePath:route("dashboard.users.destroy",":id"),editPath:route("dashboard.users.edit",":id"),showPath:route("dashboard.users.show",":id")},relations:{roles:"name"},actions:{show:!1}};console.log("user/index");new a(t);export{e as __vite_legacy_guard};
+//# sourceMappingURL=index2.js.map

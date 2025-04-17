@@ -1,6 +1,6 @@
 <x-dashboard.layouts.app>
     <x-slot name="scripts">
-        <script src="{{ mix('/js/dashboard/dashboard-app-vue.js') }}"></script>
+{{--        <script src="{{ mix('/js/dashboard/dashboard-app-vue.js') }}"></script>--}}
     </x-slot>
 
     <div class="container-fluid">

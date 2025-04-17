@@ -65,7 +65,6 @@
     <x-dashboard.form.modals._crop id="cropImage" static />
 
     <x-slot name="scripts">
-        <script src="{{ asset('/plugins/croppie/croppie.min.js') }}"></script>
-        <script src="{{ asset('/js/dashboard/profile/main.js') }}"></script>
+        @vite('resources/js/dashboard/crud/profile/main.js')
     </x-slot>
 </x-dashboard.layouts.app>

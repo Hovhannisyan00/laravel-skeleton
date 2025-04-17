@@ -1,0 +1,2 @@
+import{F as t}from"./FormRequest.js";import{M as o}from"./Modal.js";function i(){import.meta.url,import("_").catch(()=>1),async function*(){}().next()}new t;const e=new o("infoModal");$(function(){a()});function a(){e.afterShow(function(){}),e.afterHide(function(){}),e.save(function(n){e.getModalElement(),alert("Saved!"),e.hide()}),e.cancel(function(n){e.getModalElement(),alert("Canceled!")})}export{i as __vite_legacy_guard};
+//# sourceMappingURL=main.js.map

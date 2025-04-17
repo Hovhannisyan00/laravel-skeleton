@@ -19,7 +19,7 @@ class CRUDGeneratorDelete
     }
 
     /**
-     * Function to remove crud generated data.
+     * Function to remove dashboard generated data.
      */
     public function deleteCrudData(): void
     {
@@ -29,7 +29,7 @@ class CRUDGeneratorDelete
             return;
         }
 
-        $crudConfig = config('crud');
+        $crudConfig = config('dashboard');
         $disk = Storage::disk('base');
         $escapeModules = ['model_with_ml', 'ml_model', 'model_search', 'search_request'];
 

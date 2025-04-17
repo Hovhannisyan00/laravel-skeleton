@@ -1,0 +1,2 @@
+System.register(["./DataTable-legacy2.js"],(function(e,a){"use strict";var s;return{setters:[e=>{s=e.D}],execute:function(){alert("112121212121212130000aaaaaaa");const e={pathOptions:{searchPath:route("dashboard.users.getListData"),deletePath:route("dashboard.users.destroy",":id"),editPath:route("dashboard.users.edit",":id"),showPath:route("dashboard.users.show",":id")},relations:{roles:"name"},actions:{show:!1}};console.log("user/index"),new s(e)}}}));
+//# sourceMappingURL=index-legacy2.js.map

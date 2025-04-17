@@ -1,0 +1,303 @@
+{
+  "_DataTable-legacy2.js": {
+    "file": "assets/DataTable-legacy2.js",
+    "name": "DataTable"
+  },
+  "_DataTable2.js": {
+    "file": "assets/DataTable2.js",
+    "name": "DataTable"
+  },
+  "_FormRequest-legacy.js": {
+    "file": "assets/FormRequest-legacy.js",
+    "name": "FormRequest"
+  },
+  "_FormRequest.js": {
+    "file": "assets/FormRequest.js",
+    "name": "FormRequest"
+  },
+  "_Modal-legacy.js": {
+    "file": "assets/Modal-legacy.js",
+    "name": "Modal"
+  },
+  "_Modal.js": {
+    "file": "assets/Modal.js",
+    "name": "Modal"
+  },
+  "_bootstrap-legacy.js": {
+    "file": "assets/bootstrap-legacy.js",
+    "name": "bootstrap"
+  },
+  "_bootstrap.js": {
+    "file": "assets/bootstrap.js",
+    "name": "bootstrap"
+  },
+  "_dashboard-init-legacy.js": {
+    "file": "assets/dashboard-init-legacy.js",
+    "name": "dashboard-init"
+  },
+  "_dashboard-init.js": {
+    "file": "assets/dashboard-init.js",
+    "name": "dashboard-init"
+  },
+  "_vue.esm-bundler-legacy.js": {
+    "file": "assets/vue.esm-bundler-legacy.js",
+    "name": "vue.esm-bundler"
+  },
+  "_vue.esm-bundler.js": {
+    "file": "assets/vue.esm-bundler.js",
+    "name": "vue.esm-bundler"
+  },
+  "resources/fonts/Flaticon.eot": {
+    "file": "assets/Flaticon.eot",
+    "src": "resources/fonts/Flaticon.eot"
+  },
+  "resources/fonts/Flaticon.svg": {
+    "file": "assets/Flaticon.svg",
+    "src": "resources/fonts/Flaticon.svg"
+  },
+  "resources/fonts/Flaticon.ttf": {
+    "file": "assets/Flaticon.ttf",
+    "src": "resources/fonts/Flaticon.ttf"
+  },
+  "resources/fonts/Flaticon.woff": {
+    "file": "assets/Flaticon.woff",
+    "src": "resources/fonts/Flaticon.woff"
+  },
+  "resources/fonts/Flaticon2.eot": {
+    "file": "assets/Flaticon2.eot",
+    "src": "resources/fonts/Flaticon2.eot"
+  },
+  "resources/fonts/Flaticon2.svg": {
+    "file": "assets/Flaticon2.svg",
+    "src": "resources/fonts/Flaticon2.svg"
+  },
+  "resources/fonts/Flaticon2.ttf": {
+    "file": "assets/Flaticon2.ttf",
+    "src": "resources/fonts/Flaticon2.ttf"
+  },
+  "resources/fonts/Flaticon2.woff": {
+    "file": "assets/Flaticon2.woff",
+    "src": "resources/fonts/Flaticon2.woff"
+  },
+  "resources/js/app-legacy.js": {
+    "file": "assets/app-legacy.js",
+    "name": "app",
+    "src": "resources/js/app-legacy.js",
+    "isEntry": true,
+    "imports": [
+      "_bootstrap-legacy.js",
+      "_vue.esm-bundler-legacy.js"
+    ]
+  },
+  "resources/js/app.js": {
+    "file": "assets/app.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "imports": [
+      "_bootstrap.js",
+      "_vue.esm-bundler.js"
+    ]
+  },
+  "resources/js/bundle-legacy.js": {
+    "file": "assets/bundle-legacy.js",
+    "name": "bundle",
+    "src": "resources/js/bundle-legacy.js",
+    "isEntry": true,
+    "imports": [
+      "_dashboard-init-legacy.js",
+      "_Modal-legacy.js",
+      "_bootstrap-legacy.js"
+    ]
+  },
+  "resources/js/bundle.js": {
+    "file": "assets/bundle.js",
+    "name": "bundle",
+    "src": "resources/js/bundle.js",
+    "isEntry": true,
+    "imports": [
+      "_dashboard-init.js",
+      "_Modal.js",
+      "_bootstrap.js"
+    ]
+  },
+  "resources/js/dashboard/crud/article/index-legacy.js": {
+    "file": "assets/index-legacy.js",
+    "name": "index",
+    "src": "resources/js/dashboard/crud/article/index-legacy.js",
+    "isEntry": true,
+    "imports": [
+      "_DataTable-legacy2.js"
+    ]
+  },
+  "resources/js/dashboard/crud/article/index.js": {
+    "file": "assets/index.js",
+    "name": "index",
+    "src": "resources/js/dashboard/crud/article/index.js",
+    "isEntry": true,
+    "imports": [
+      "_DataTable2.js"
+    ]
+  },
+  "resources/js/dashboard/crud/article/main-legacy.js": {
+    "file": "assets/main-legacy.js",
+    "name": "main",
+    "src": "resources/js/dashboard/crud/article/main-legacy.js",
+    "isEntry": true,
+    "imports": [
+      "_FormRequest-legacy.js",
+      "_Modal-legacy.js"
+    ]
+  },
+  "resources/js/dashboard/crud/article/main.js": {
+    "file": "assets/main.js",
+    "name": "main",
+    "src": "resources/js/dashboard/crud/article/main.js",
+    "isEntry": true,
+    "imports": [
+      "_FormRequest.js",
+      "_Modal.js"
+    ]
+  },
+  "resources/js/dashboard/crud/profile/main-legacy.js": {
+    "file": "assets/main-legacy2.js",
+    "name": "main",
+    "src": "resources/js/dashboard/crud/profile/main-legacy.js",
+    "isEntry": true,
+    "imports": [
+      "_FormRequest-legacy.js"
+    ]
+  },
+  "resources/js/dashboard/crud/profile/main.js": {
+    "file": "assets/main2.js",
+    "name": "main",
+    "src": "resources/js/dashboard/crud/profile/main.js",
+    "isEntry": true,
+    "imports": [
+      "_FormRequest.js"
+    ]
+  },
+  "resources/js/dashboard/crud/user/index-legacy.js": {
+    "file": "assets/index-legacy2.js",
+    "name": "index",
+    "src": "resources/js/dashboard/crud/user/index-legacy.js",
+    "isEntry": true,
+    "imports": [
+      "_DataTable-legacy2.js"
+    ]
+  },
+  "resources/js/dashboard/crud/user/index.js": {
+    "file": "assets/index2.js",
+    "name": "index",
+    "src": "resources/js/dashboard/crud/user/index.js",
+    "isEntry": true,
+    "imports": [
+      "_DataTable2.js"
+    ]
+  },
+  "resources/js/dashboard/crud/user/main-legacy.js": {
+    "file": "assets/main-legacy3.js",
+    "name": "main",
+    "src": "resources/js/dashboard/crud/user/main-legacy.js",
+    "isEntry": true,
+    "imports": [
+      "_FormRequest-legacy.js"
+    ]
+  },
+  "resources/js/dashboard/crud/user/main.js": {
+    "file": "assets/main3.js",
+    "name": "main",
+    "src": "resources/js/dashboard/crud/user/main.js",
+    "isEntry": true,
+    "imports": [
+      "_FormRequest.js"
+    ]
+  },
+  "resources/js/dashboard/dashboard-app-legacy.js": {
+    "file": "assets/dashboard-app-legacy.js",
+    "name": "dashboard-app",
+    "src": "resources/js/dashboard/dashboard-app-legacy.js",
+    "isEntry": true,
+    "imports": [
+      "_bootstrap-legacy.js",
+      "_dashboard-init-legacy.js"
+    ]
+  },
+  "resources/js/dashboard/dashboard-app-vue-legacy.js": {
+    "file": "assets/dashboard-app-vue-legacy.js",
+    "name": "dashboard-app-vue",
+    "src": "resources/js/dashboard/dashboard-app-vue-legacy.js",
+    "isEntry": true,
+    "imports": [
+      "_vue.esm-bundler-legacy.js"
+    ]
+  },
+  "resources/js/dashboard/dashboard-app-vue.js": {
+    "file": "assets/dashboard-app-vue.js",
+    "name": "dashboard-app-vue",
+    "src": "resources/js/dashboard/dashboard-app-vue.js",
+    "isEntry": true,
+    "imports": [
+      "_vue.esm-bundler.js"
+    ]
+  },
+  "resources/js/dashboard/dashboard-app.js": {
+    "file": "assets/dashboard-app.js",
+    "name": "dashboard-app",
+    "src": "resources/js/dashboard/dashboard-app.js",
+    "isEntry": true,
+    "imports": [
+      "_bootstrap.js",
+      "_dashboard-init.js"
+    ]
+  },
+  "resources/sass/app-legacy.scss": {
+    "file": "assets/app-legacy2.js",
+    "name": "app",
+    "src": "resources/sass/app-legacy.scss",
+    "isEntry": true
+  },
+  "resources/sass/app.scss": {
+    "file": "assets/app.css",
+    "src": "resources/sass/app.scss",
+    "isEntry": true
+  },
+  "resources/sass/dashboard/core/datatable-legacy.scss": {
+    "file": "assets/datatable-legacy.js",
+    "name": "datatable",
+    "src": "resources/sass/dashboard/core/datatable-legacy.scss",
+    "isEntry": true
+  },
+  "resources/sass/dashboard/core/datatable.scss": {
+    "file": "assets/datatable.css",
+    "src": "resources/sass/dashboard/core/datatable.scss",
+    "isEntry": true
+  },
+  "resources/sass/dashboard/dashboard-app-legacy.scss": {
+    "file": "assets/dashboard-app-legacy2.js",
+    "name": "dashboard-app",
+    "src": "resources/sass/dashboard/dashboard-app-legacy.scss",
+    "isEntry": true,
+    "assets": [
+      "assets/Flaticon.eot",
+      "assets/Flaticon.woff",
+      "assets/Flaticon.ttf",
+      "assets/Flaticon.svg",
+      "assets/Flaticon2.eot",
+      "assets/Flaticon2.woff",
+      "assets/Flaticon2.ttf",
+      "assets/Flaticon2.svg"
+    ]
+  },
+  "resources/sass/dashboard/dashboard-app.scss": {
+    "file": "assets/dashboard-app.css",
+    "src": "resources/sass/dashboard/dashboard-app.scss",
+    "isEntry": true
+  },
+  "vite/legacy-polyfills-legacy": {
+    "file": "assets/polyfills-legacy.js",
+    "name": "polyfills",
+    "src": "vite/legacy-polyfills-legacy",
+    "isEntry": true
+  }
+}

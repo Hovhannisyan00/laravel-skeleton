@@ -13,14 +13,14 @@ class CRUDGeneratorRemove extends Command
      *
      * @var string
      */
-    protected $signature = 'remove:crud';
+    protected $signature = 'remove:dashboard';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command for delete created crud';
+    protected $description = 'Command for delete created dashboard';
 
     public function __construct()
     {
@@ -28,7 +28,7 @@ class CRUDGeneratorRemove extends Command
     }
 
     /**
-     * Function to remove crud generated data.
+     * Function to remove dashboard generated data.
      */
     public function handle(): void
     {

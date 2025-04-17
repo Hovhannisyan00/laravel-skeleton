@@ -40,7 +40,7 @@ abstract class CRUDGeneratorAbstract
      */
     protected function getConfig(string $key): array
     {
-        return config("crud.$key");
+        return config("dashboard.$key");
     }
 
     /**
@@ -99,7 +99,7 @@ abstract class CRUDGeneratorAbstract
     }
 
     /**
-     * Function to check crud has ml.
+     * Function to check dashboard has ml.
      */
     public function hasMl(): bool
     {
