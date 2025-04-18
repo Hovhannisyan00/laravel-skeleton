@@ -16,7 +16,5 @@ const options = {
     show: false,
   },
 };
-
-console.log('user/index');
 // eslint-disable-next-line no-new,no-undef
 new DataTable(options);

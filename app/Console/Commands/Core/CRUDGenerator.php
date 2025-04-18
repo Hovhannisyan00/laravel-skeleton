@@ -14,7 +14,7 @@ class CRUDGenerator extends Command
      *
      * @var string
      */
-    protected $signature = 'make:dashboard';
+    protected $signature = 'make:crud';
 
     /**
      * The console command description.

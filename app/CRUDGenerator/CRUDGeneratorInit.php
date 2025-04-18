@@ -20,7 +20,7 @@ class CRUDGeneratorInit
     }
 
     /**
-     * Function to init dashboard functionality.
+     * Function to init crud functionality.
      *
      * @throws BindingResolutionException
      */
