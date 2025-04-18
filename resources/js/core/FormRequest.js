@@ -1,3 +1,5 @@
+import Tab from 'bootstrap/js/dist/tab';
+
 export class FormRequest {
   constructor(options, formId = '__form__request') {
     this.options = options;
@@ -84,8 +86,14 @@ export class FormRequest {
   scrollToFirstError() {
     const firstError = this.formEl.find('.validation-error.has-error').first();
 
-    if (firstError.closest('.tab-pane')) {
-      $(`.nav-tabs a[href="#${firstError.closest('.tab-pane').attr('id')}"]`).tab('show');
+    const tabPane = firstError.closest('.tab-pane');
+    if (tabPane.length) {
+      const tabId = tabPane.attr('id');
+      const tabTrigger = document.querySelector(`a[data-bs-toggle="tab"][href="#${tabId}"]`);
+      if (tabTrigger) {
+        const tab = new Tab(tabTrigger);
+        tab.show();
+      }
     }
 
     if (firstError.length) {

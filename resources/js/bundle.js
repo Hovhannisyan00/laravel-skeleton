@@ -12,3 +12,5 @@ import './core/bootstrap.js';
 import './plugins/ckeditor.js';
 import './plugins/moment.min.js';
 
+//Common
+import './common/main.js';

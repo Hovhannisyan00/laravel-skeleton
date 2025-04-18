@@ -1,2 +1,2 @@
-System.register(["./bootstrap-legacy.js","./vue.esm-bundler-legacy.js"],(function(e,t){"use strict";var s;return{setters:[null,e=>{s=e.c}],execute:function(){s({}).mount("#app")}}}));
+System.register(["./bootstrap-legacy.js","./vue.esm-bundler-legacy.js","./_commonjsHelpers-legacy.js"],(function(e,s){"use strict";var t;return{setters:[null,e=>{t=e.c},null],execute:function(){t({}).mount("#app")}}}));
 //# sourceMappingURL=app-legacy.js.map

@@ -16,7 +16,6 @@ $(function () {
   minimizeMenu();
 });
 window.showSuccessMessage = function (message) {
-  alert(1111, 'successss mesageeeee')
   $.toast({
     text: message,
     hideAfter: 2000,
@@ -40,31 +39,6 @@ window.showErrorMessage = function (message) {
     allowToastClose: false,
   });
 };
-// function showSuccessMessage(message) {
-//   $.toast({
-//     text: message,
-//     hideAfter: 2000,
-//     position: 'top-right',
-//     stack: false,
-//     loader: false,
-//     icon: 'success',
-//     allowToastClose: false,
-//   });
-//
-// };
-// function showErrorMessage(message) {
-//   $.toast({
-//     heading: 'Error',
-//     hideAfter: 2000,
-//     text: message,
-//     position: 'top-right',
-//     stack: false,
-//     loader: false,
-//     icon: 'error',
-//     allowToastClose: false,
-//   });
-//
-// };
 function select2Init (div = undefined, className = 'select2') {
   let select2 = $(`select.${className}`);
   if (typeof div !== 'undefined') {

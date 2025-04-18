@@ -1,2 +1,2 @@
-System.register(["./FormRequest-legacy.js"],(function(e,t){"use strict";var r;return{setters:[e=>{r=e.F}],execute:function(){new r}}}));
+System.register(["./FormRequest-legacy.js","./Modal-legacy.js","./tab-legacy.js","./_commonjsHelpers-legacy.js"],(function(e,n){"use strict";var t,l;return{setters:[e=>{t=e.F},e=>{l=e.M},null,null],execute:function(){new t;const e=new l("infoModal");$((function(){e.afterShow((function(){})),e.afterHide((function(){})),e.save((function(n){e.getModalElement(),alert("Saved!"),e.hide()})),e.cancel((function(n){e.getModalElement(),alert("Canceled!")}))}))}}}));
 //# sourceMappingURL=main-legacy2.js.map

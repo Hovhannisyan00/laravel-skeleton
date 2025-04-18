@@ -1,3 +1,5 @@
+import Modal from 'bootstrap/js/dist/modal';
+
 // eslint-disable-next-line no-underscore-dangle
 let _selfConfirmModal;
 
@@ -8,8 +10,22 @@ class ConfirmModal {
   }
 
   // eslint-disable-next-line class-methods-use-this
+  // modalVisible(type = 'show') {
+  //   console.log(12121212);
+  //   $('#d_confirm__modal').modal(type);
+  // }
+
   modalVisible(type = 'show') {
-    $('#d_confirm__modal').modal(type);
+    const modalEl = document.getElementById('d_confirm__modal');
+
+    if (!modalEl) return;
+
+    if (!this.bsModal) {
+      this.bsModal = new Modal(modalEl);
+    }
+
+    if (type === 'show') this.bsModal.show();
+    else this.bsModal.hide();
   }
 
   // eslint-disable-next-line class-methods-use-this

@@ -19,19 +19,15 @@ export default defineConfig({
         'resources/js/app.js',
         'resources/js/dashboard/dashboard-app.js',
         'resources/js/dashboard/dashboard-app-vue.js',
-
+        'resources/js/common/main.js',
 
         // CSS
         'resources/sass/app.scss',
         'resources/sass/dashboard/dashboard-app.scss',
         'resources/sass/dashboard/core/datatable.scss',
 
-        //JS crud
-        'resources/js/dashboard/crud/article/index.js',
-        'resources/js/dashboard/crud/article/main.js',
-        'resources/js/dashboard/crud/profile/main.js',
-        'resources/js/dashboard/crud/user/index.js',
-        'resources/js/dashboard/crud/user/main.js',
+        //js crud
+        ...inputFiles,
       ],
       refresh: true,
     }),

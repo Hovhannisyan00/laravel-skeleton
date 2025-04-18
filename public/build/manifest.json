@@ -9,11 +9,17 @@
   },
   "_FormRequest-legacy.js": {
     "file": "assets/FormRequest-legacy.js",
-    "name": "FormRequest"
+    "name": "FormRequest",
+    "imports": [
+      "_tab-legacy.js"
+    ]
   },
   "_FormRequest.js": {
     "file": "assets/FormRequest.js",
-    "name": "FormRequest"
+    "name": "FormRequest",
+    "imports": [
+      "_tab.js"
+    ]
   },
   "_Modal-legacy.js": {
     "file": "assets/Modal-legacy.js",
@@ -23,13 +29,27 @@
     "file": "assets/Modal.js",
     "name": "Modal"
   },
+  "__commonjsHelpers-legacy.js": {
+    "file": "assets/_commonjsHelpers-legacy.js",
+    "name": "_commonjsHelpers"
+  },
+  "__commonjsHelpers.js": {
+    "file": "assets/_commonjsHelpers.js",
+    "name": "_commonjsHelpers"
+  },
   "_bootstrap-legacy.js": {
     "file": "assets/bootstrap-legacy.js",
-    "name": "bootstrap"
+    "name": "bootstrap",
+    "imports": [
+      "__commonjsHelpers-legacy.js"
+    ]
   },
   "_bootstrap.js": {
     "file": "assets/bootstrap.js",
-    "name": "bootstrap"
+    "name": "bootstrap",
+    "imports": [
+      "__commonjsHelpers.js"
+    ]
   },
   "_dashboard-init-legacy.js": {
     "file": "assets/dashboard-init-legacy.js",
@@ -38,6 +58,20 @@
   "_dashboard-init.js": {
     "file": "assets/dashboard-init.js",
     "name": "dashboard-init"
+  },
+  "_tab-legacy.js": {
+    "file": "assets/tab-legacy.js",
+    "name": "tab",
+    "imports": [
+      "__commonjsHelpers-legacy.js"
+    ]
+  },
+  "_tab.js": {
+    "file": "assets/tab.js",
+    "name": "tab",
+    "imports": [
+      "__commonjsHelpers.js"
+    ]
   },
   "_vue.esm-bundler-legacy.js": {
     "file": "assets/vue.esm-bundler-legacy.js",
@@ -86,7 +120,8 @@
     "isEntry": true,
     "imports": [
       "_bootstrap-legacy.js",
-      "_vue.esm-bundler-legacy.js"
+      "_vue.esm-bundler-legacy.js",
+      "__commonjsHelpers-legacy.js"
     ]
   },
   "resources/js/app.js": {
@@ -96,7 +131,8 @@
     "isEntry": true,
     "imports": [
       "_bootstrap.js",
-      "_vue.esm-bundler.js"
+      "_vue.esm-bundler.js",
+      "__commonjsHelpers.js"
     ]
   },
   "resources/js/bundle-legacy.js": {
@@ -106,8 +142,11 @@
     "isEntry": true,
     "imports": [
       "_dashboard-init-legacy.js",
+      "_tab-legacy.js",
+      "__commonjsHelpers-legacy.js",
       "_Modal-legacy.js",
-      "_bootstrap-legacy.js"
+      "_bootstrap-legacy.js",
+      "resources/js/common/main-legacy.js"
     ]
   },
   "resources/js/bundle.js": {
@@ -117,9 +156,24 @@
     "isEntry": true,
     "imports": [
       "_dashboard-init.js",
+      "_tab.js",
+      "__commonjsHelpers.js",
       "_Modal.js",
-      "_bootstrap.js"
+      "_bootstrap.js",
+      "resources/js/common/main.js"
     ]
+  },
+  "resources/js/common/main-legacy.js": {
+    "file": "assets/main-legacy.js",
+    "name": "main",
+    "src": "resources/js/common/main-legacy.js",
+    "isEntry": true
+  },
+  "resources/js/common/main.js": {
+    "file": "assets/main.js",
+    "name": "main",
+    "src": "resources/js/common/main.js",
+    "isEntry": true
   },
   "resources/js/dashboard/crud/article/index-legacy.js": {
     "file": "assets/index-legacy.js",
@@ -140,41 +194,49 @@
     ]
   },
   "resources/js/dashboard/crud/article/main-legacy.js": {
-    "file": "assets/main-legacy.js",
+    "file": "assets/main-legacy2.js",
     "name": "main",
     "src": "resources/js/dashboard/crud/article/main-legacy.js",
     "isEntry": true,
     "imports": [
       "_FormRequest-legacy.js",
-      "_Modal-legacy.js"
+      "_Modal-legacy.js",
+      "_tab-legacy.js",
+      "__commonjsHelpers-legacy.js"
     ]
   },
   "resources/js/dashboard/crud/article/main.js": {
-    "file": "assets/main.js",
+    "file": "assets/main2.js",
     "name": "main",
     "src": "resources/js/dashboard/crud/article/main.js",
     "isEntry": true,
     "imports": [
       "_FormRequest.js",
-      "_Modal.js"
+      "_Modal.js",
+      "_tab.js",
+      "__commonjsHelpers.js"
     ]
   },
   "resources/js/dashboard/crud/profile/main-legacy.js": {
-    "file": "assets/main-legacy2.js",
+    "file": "assets/main-legacy3.js",
     "name": "main",
     "src": "resources/js/dashboard/crud/profile/main-legacy.js",
     "isEntry": true,
     "imports": [
-      "_FormRequest-legacy.js"
+      "_FormRequest-legacy.js",
+      "_tab-legacy.js",
+      "__commonjsHelpers-legacy.js"
     ]
   },
   "resources/js/dashboard/crud/profile/main.js": {
-    "file": "assets/main2.js",
+    "file": "assets/main3.js",
     "name": "main",
     "src": "resources/js/dashboard/crud/profile/main.js",
     "isEntry": true,
     "imports": [
-      "_FormRequest.js"
+      "_FormRequest.js",
+      "_tab.js",
+      "__commonjsHelpers.js"
     ]
   },
   "resources/js/dashboard/crud/user/index-legacy.js": {
@@ -196,21 +258,25 @@
     ]
   },
   "resources/js/dashboard/crud/user/main-legacy.js": {
-    "file": "assets/main-legacy3.js",
+    "file": "assets/main-legacy4.js",
     "name": "main",
     "src": "resources/js/dashboard/crud/user/main-legacy.js",
     "isEntry": true,
     "imports": [
-      "_FormRequest-legacy.js"
+      "_FormRequest-legacy.js",
+      "_tab-legacy.js",
+      "__commonjsHelpers-legacy.js"
     ]
   },
   "resources/js/dashboard/crud/user/main.js": {
-    "file": "assets/main3.js",
+    "file": "assets/main4.js",
     "name": "main",
     "src": "resources/js/dashboard/crud/user/main.js",
     "isEntry": true,
     "imports": [
-      "_FormRequest.js"
+      "_FormRequest.js",
+      "_tab.js",
+      "__commonjsHelpers.js"
     ]
   },
   "resources/js/dashboard/dashboard-app-legacy.js": {
@@ -220,7 +286,8 @@
     "isEntry": true,
     "imports": [
       "_bootstrap-legacy.js",
-      "_dashboard-init-legacy.js"
+      "_dashboard-init-legacy.js",
+      "__commonjsHelpers-legacy.js"
     ]
   },
   "resources/js/dashboard/dashboard-app-vue-legacy.js": {
@@ -248,7 +315,8 @@
     "isEntry": true,
     "imports": [
       "_bootstrap.js",
-      "_dashboard-init.js"
+      "_dashboard-init.js",
+      "__commonjsHelpers.js"
     ]
   },
   "resources/sass/app-legacy.scss": {

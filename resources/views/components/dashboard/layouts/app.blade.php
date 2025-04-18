@@ -40,8 +40,7 @@
 <x-dashboard.partials.modals/>
 
 {{-- Core Js  --}}
-@vite('resources/js/dashboard/dashboard-app.js')
-@vite('resources/js/bundle.js')
+@vite(['resources/js/common/main.js','resources/js/bundle.js', 'resources/js/dashboard/dashboard-app.js', ])
 
 {{ $scripts ?? '' }}
 
