@@ -90,7 +90,7 @@ return [
     ],
 
     'js' => [
-        'path' => 'public\\js\\dashboard\\:attribute',
+        'path' => 'resources\\js\\dashboard\\crud\\:attribute',
         'files' => [
             [
                 'file_name' => 'index.js',

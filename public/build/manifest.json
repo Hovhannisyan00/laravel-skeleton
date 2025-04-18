@@ -239,8 +239,32 @@
       "__commonjsHelpers.js"
     ]
   },
-  "resources/js/dashboard/crud/user/index-legacy.js": {
+  "resources/js/dashboard/crud/test/index-legacy.js": {
     "file": "assets/index-legacy2.js",
+    "name": "index",
+    "src": "resources/js/dashboard/crud/test/index-legacy.js",
+    "isEntry": true
+  },
+  "resources/js/dashboard/crud/test/index.js": {
+    "file": "assets/index2.js",
+    "name": "index",
+    "src": "resources/js/dashboard/crud/test/index.js",
+    "isEntry": true
+  },
+  "resources/js/dashboard/crud/test/main-legacy.js": {
+    "file": "assets/main-legacy4.js",
+    "name": "main",
+    "src": "resources/js/dashboard/crud/test/main-legacy.js",
+    "isEntry": true
+  },
+  "resources/js/dashboard/crud/test/main.js": {
+    "file": "assets/main4.js",
+    "name": "main",
+    "src": "resources/js/dashboard/crud/test/main.js",
+    "isEntry": true
+  },
+  "resources/js/dashboard/crud/user/index-legacy.js": {
+    "file": "assets/index-legacy3.js",
     "name": "index",
     "src": "resources/js/dashboard/crud/user/index-legacy.js",
     "isEntry": true,
@@ -249,7 +273,7 @@
     ]
   },
   "resources/js/dashboard/crud/user/index.js": {
-    "file": "assets/index2.js",
+    "file": "assets/index3.js",
     "name": "index",
     "src": "resources/js/dashboard/crud/user/index.js",
     "isEntry": true,
@@ -258,7 +282,7 @@
     ]
   },
   "resources/js/dashboard/crud/user/main-legacy.js": {
-    "file": "assets/main-legacy4.js",
+    "file": "assets/main-legacy5.js",
     "name": "main",
     "src": "resources/js/dashboard/crud/user/main-legacy.js",
     "isEntry": true,
@@ -269,7 +293,7 @@
     ]
   },
   "resources/js/dashboard/crud/user/main.js": {
-    "file": "assets/main4.js",
+    "file": "assets/main5.js",
     "name": "main",
     "src": "resources/js/dashboard/crud/user/main.js",
     "isEntry": true,
