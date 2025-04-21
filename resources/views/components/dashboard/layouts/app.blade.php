@@ -12,8 +12,6 @@
 
     <script src="{{ asset('plugins/moment/moment.min.js') }}"></script>
 
-{{--    <link rel="stylesheet" href="{{ asset('plugins/croppie/croppie.min.css') }}">--}}
-
     {{-- Token --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
 

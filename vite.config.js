@@ -3,6 +3,7 @@ import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
 import viteLegacyPlugin from '@vitejs/plugin-legacy';
 import inputFiles from './vite.inputs.js';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   define: {
@@ -15,12 +16,11 @@ export default defineConfig({
         // JS global
         'resources/js/app.js',
         'resources/js/dashboard/dashboard-app-vue.js',
+        'resources/js/dashboard/dashboard-app-react.jsx',
         'resources/js/dashboard/dashboard-app.js',
 
         //core
         'resources/js/bundle.js',
-
-        // 'resources/js/common/main.js',
 
         // CSS
         'resources/sass/app.scss',
@@ -46,6 +46,7 @@ export default defineConfig({
         },
       },
     }),
+    react(),
   ],
 
   resolve: {

@@ -60,6 +60,14 @@ class MenuSeeder extends Seeder
                 'type' => 'admin',
                 'role' => [RoleType::ADMIN],
             ],
+            [
+                'title' => 'React',
+                'slug' => 'react-example',
+                'url' => route('dashboard.react-example.index', [], false),
+                'icon' => 'fab fa-react',
+                'type' => 'admin',
+                'role' => [RoleType::ADMIN],
+            ]
         ];
 
         foreach ($menus as $key => $menu) {

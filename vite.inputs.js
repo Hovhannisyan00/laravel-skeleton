@@ -14,7 +14,7 @@ function getAllJsFiles(dir) {
     if (stat.isDirectory()) {
       results = results.concat(getAllJsFiles(fullPath));
     } else if (path.extname(fullPath) === '.js') {
-      results.push(fullPath.replace(/\\/g, '/')); // normalize for Windows
+      results.push(fullPath.replace(/\\/g, '/'));
     }
   }
 
