@@ -15,7 +15,7 @@ class ArticleRequest extends FormRequest
             'slug' => 'required|string|max:50|unique:' . Article::getTableName() . ',slug,' . $this->article?->id,
             'publish_date' => 'required|after_or_equal_today',
             'release_date_time' => 'required|datetime',
-            'photo' => 'required|string_with_max',
+            'photo' => 'nullable|string_with_max',
 
             'multiple_group_data' => 'nullable|array',
             'multiple_group_data.*.title' => 'nullable|string_with_max',

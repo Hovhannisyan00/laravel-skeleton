@@ -12,14 +12,15 @@ export default defineConfig({
   plugins: [
     laravel({
       input: [
+        // JS global
+        'resources/js/app.js',
+        'resources/js/dashboard/dashboard-app-vue.js',
+        'resources/js/dashboard/dashboard-app.js',
+
         //core
         'resources/js/bundle.js',
 
-        // JS global
-        'resources/js/app.js',
-        'resources/js/dashboard/dashboard-app.js',
-        'resources/js/dashboard/dashboard-app-vue.js',
-        'resources/js/common/main.js',
+        // 'resources/js/common/main.js',
 
         // CSS
         'resources/sass/app.scss',

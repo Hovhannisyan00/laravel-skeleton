@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{config('app.name')}}</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    {{-- Core Js  --}}
+    @vite(['resources/js/dashboard/dashboard-app.js'])
+    @vite(['resources/js/bundle.js'])
+
+    <script src="{{ asset('plugins/moment/moment.min.js') }}"></script>
+
+    <link rel="stylesheet" href="{{ asset('plugins/croppie/croppie.min.css') }}">
 
     {{-- Token --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -14,7 +21,7 @@
     <link href="{{ asset('/css/dashboard/datatable.css') }}" rel="stylesheet">
     @vite('resources/sass/dashboard/dashboard-app.scss')
 
-
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
@@ -38,9 +45,6 @@
 </main>
 
 <x-dashboard.partials.modals/>
-
-{{-- Core Js  --}}
-@vite(['resources/js/common/main.js','resources/js/bundle.js', 'resources/js/dashboard/dashboard-app.js', ])
 
 {{ $scripts ?? '' }}
 

@@ -7,10 +7,8 @@ import './core/DataTable.js';
 import './core/MultipleInputs.js';
 import './core/FileUploader.js';
 import './core/bootstrap.js';
+import './dashboard/plugins/croppie/croppie.min.js';
 
 // Plugins
 import './plugins/ckeditor.js';
-import './plugins/moment.min.js';
-
-//Common
 import './common/main.js';

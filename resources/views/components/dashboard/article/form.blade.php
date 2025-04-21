@@ -111,7 +111,7 @@
     </div>
 
     <x-slot name="scripts">
-        <script type="module" src="{{ asset('/js/dashboard/article/main.js') }}"></script>
+{{--        <script type="module" src="{{ asset('/js/dashboard/article/main.js') }}"></script>--}}
         @vite('resources/js/dashboard/crud/article/main.js')
 
     </x-slot>

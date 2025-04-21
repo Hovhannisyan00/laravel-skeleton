@@ -257,3 +257,4 @@ class FileUploader {
 
 // eslint-disable-next-line no-new
 new FileUploader();
+window.FileUploader = FileUploader;
