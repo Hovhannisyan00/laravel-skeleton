@@ -11,6 +11,45 @@
 - php artisan db:seed
 - php artisan storage:link
 
+
+---
+## ⚛️ Switching Between Vue and React
+
+1. By default, this project includes both **Vue** and **React** examples. To avoid conflicts, choose **one** of them and follow the steps below to clean up the unused parts.
+
+### 👉 If you want to use **React**:
+
+1. **Delete Vue files**:
+    - `resources/js/dashboard/vue`
+    - `resources/views/components/dashboard/vue-example`
+    -  remove Vue-related imports and blocks in `resources/js/app.js`.
+    -  remove Vue part $menus in `database/seeders/Menu/MenuSeeder.php`.
+2. **Delete the Vue route** in `routes/dashboard.php`:
+   ```php
+   // Route::view('vue-example', 'components.dashboard.vue-example.index')->name('vue-example.index');
+
+3. **Install React and Vite plugin**:
+   ```bash
+   npm install react react-dom
+   npm install --save-dev vite @vitejs/plugin-react
+
+### 👉 If you want to use **Vue**:
+
+1. **Delete React files**:
+    - `resources/js/dashboard/react`
+    - `resources/views/components/dashboard/react-example`
+    -  remove React-related imports and blocks in `resources/js/app.js`.
+    -  remove React part $menus in `database/seeders/Menu/MenuSeeder.php`.
+
+2. **Delete the Vue route** in `routes/dashboard.php`:
+   ```php
+   // Route::view('vue-example', 'components.dashboard.vue-example.index')->name('vue-example.index');
+
+3. **Install Vue and Vite plugin**:
+   ```bash
+   npm install vue
+   npm install --save-dev @vitejs/plugin-vue
+
 -------------------------------------------------------------------
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"> </a></p>

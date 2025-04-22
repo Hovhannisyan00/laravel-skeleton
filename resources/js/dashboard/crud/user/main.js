@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef,no-new
 import {FormRequest} from "../../../core/FormRequest.js";
 
 new FormRequest();

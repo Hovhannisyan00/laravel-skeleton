@@ -42,7 +42,7 @@ Route::controller(ProfileController::class)->as('profile.')->group(function () {
 });
 
 // Vue Example
-Route::view('vue-example', 'components.dashboard.vue-example.index')->name('vue-example.index');
+//Route::view('vue-example', 'components.dashboard.vue-example.index')->name('vue-example.index');
 
 // React Example
-Route::view('react-example','components.dashboard.react-example.index')->name('react-example.index');
+//Route::view('react-example','components.dashboard.react-example.index')->name('react-example.index');

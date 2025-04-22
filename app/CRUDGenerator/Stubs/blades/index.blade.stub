@@ -24,7 +24,7 @@
     </div>
 
     <x-slot name="scripts">
-        @vite('resources/js/dashboard/{{ CLASS_NAME }}/index.js')
+        @vite('resources/js/dashboard/crud/{{ CLASS_NAME }}/index.js')
     </x-slot>
 </x-dashboard.layouts.app>
 

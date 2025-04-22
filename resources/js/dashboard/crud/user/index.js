@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef,no-new
 import {DataTable} from "../../../core/DataTable.js";
 
 const options = {

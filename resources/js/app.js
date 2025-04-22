@@ -1,15 +1,17 @@
-import './core/bootstrap';
-import { createApp } from 'vue';
+// Vue
 
-const app = createApp({});
-app.mount('#app');
+// import './core/bootstrap';
+// import { createApp } from 'vue';
+//
+// const app = createApp({});
+// app.mount('#app');
 
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
  * components and automatically register them with their "basename".
  *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
+ * E.g. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
 // const files = require.context('./', true, /\.vue$/i)
@@ -23,3 +25,17 @@ app.mount('#app');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+
+
+
+//  React
+
+// import React from 'react';
+// import ReactDOM from 'react-dom/client';
+
+/** Import your components here
+ import ExampleComponent from './components/ExampleComponent';
+**/
+
+// const App = () => {return (<div id="app"></div>);};
+// ReactDOM.createRoot(document.getElementById('app')).render(<App />);App
