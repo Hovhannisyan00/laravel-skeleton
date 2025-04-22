@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
-import vue from '@vitejs/plugin-vue';
 import viteLegacyPlugin from '@vitejs/plugin-legacy';
 import inputFiles from './vite.inputs.js';
-import react from '@vitejs/plugin-react';
+// import vue from '@vitejs/plugin-vue';
+// import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   define: {
@@ -15,9 +15,12 @@ export default defineConfig({
       input: [
         // JS global
         'resources/js/app.js',
-        'resources/js/dashboard/dashboard-app-vue.js',
-        'resources/js/dashboard/dashboard-app-react.jsx',
         'resources/js/dashboard/dashboard-app.js',
+
+        // Activate React or Vur
+
+        // 'resources/js/dashboard/dashboard-app-vue.js',
+        // 'resources/js/dashboard/dashboard-app-react.jsx',
 
         // Core
         'resources/js/bundle.js',
@@ -37,16 +40,16 @@ export default defineConfig({
       targets: ['defaults', 'not IE 11'],
     }),
 
-    vue({
-      reactivityTransform: true,
-      template: {
-        transformAssetUrls: {
-          base: null,
-          includeAbsolute: false,
-        },
-      },
-    }),
-    react(),
+    // vue({
+    //   reactivityTransform: true,
+    //   template: {
+    //     transformAssetUrls: {
+    //       base: null,
+    //       includeAbsolute: false,
+    //     },
+    //   },
+    // }),
+    // react(),
   ],
 
   resolve: {
