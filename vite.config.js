@@ -7,7 +7,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   define: {
-    'global': 'window',
+    global: 'window',
   },
 
   plugins: [
@@ -19,7 +19,7 @@ export default defineConfig({
         'resources/js/dashboard/dashboard-app-react.jsx',
         'resources/js/dashboard/dashboard-app.js',
 
-        //core
+        // Core
         'resources/js/bundle.js',
 
         // CSS
@@ -27,7 +27,7 @@ export default defineConfig({
         'resources/sass/dashboard/dashboard-app.scss',
         'resources/sass/dashboard/core/datatable.scss',
 
-        //js crud
+        // Js crud
         ...inputFiles,
       ],
       refresh: true,

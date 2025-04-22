@@ -1,3 +1,6 @@
+import { FormRequest } from '../../../core/FormRequest.js';
+import { Modal } from '../../../core/Modal.js';
+
 /*
 const options = {
   methods: {
@@ -15,10 +18,8 @@ const options = {
   }
 }
 */
-import {FormRequest} from "../../../core/FormRequest.js";
-import {Modal} from "../../../core/Modal.js";
 
-new FormRequest();
+new FormRequest({});
 
 const infoModal = new Modal('infoModal');
 
@@ -27,27 +28,27 @@ $(function () {
 });
 
 function infoModalEvent() {
-  infoModal.afterShow(function () {
+  infoModal.afterShow(() => {
     // Info Modal Opened!
   });
 
-  infoModal.afterHide(function () {
+  infoModal.afterHide(() => {
     // Info Modal Hide!
   });
 
-  infoModal.save(function (e) {
+  infoModal.save((e) => {
     const currentModalContent = infoModal.getModalElement();
 
-    alert("Saved!");
+    alert('Saved!');
     infoModal.hide();
   });
 
-  infoModal.cancel(function (e) {
+  infoModal.cancel((e) => {
     // e.stopPropagation(); // stop close event
 
     const currentModalContent = infoModal.getModalElement();
 
-    alert("Canceled!");
+    alert('Canceled!');
 
     // infoModal.hide()
     // infoModal.show()

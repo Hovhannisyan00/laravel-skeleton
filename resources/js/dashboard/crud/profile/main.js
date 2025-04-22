@@ -1,3 +1,3 @@
-import {FormRequest} from "../../../core/FormRequest.js";
+import { FormRequest } from '../../../core/FormRequest.js';
 
-new FormRequest();
+new FormRequest({});

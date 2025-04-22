@@ -1,4 +1,4 @@
-import {DataTable} from "../../../core/DataTable.js";
+import { DataTable } from '../../../core/DataTable.js';
 
 const options = {
   pathOptions: {
@@ -25,13 +25,13 @@ const options = {
   // If don't want to save search data
   // storeSearchData: false,
 
-  /*afterStoreSearchedData(storedData) {
+  /* afterStoreSearchedData(storedData) {
     console.log(storedData);
   },
 
   afterSetSearchStoredData(storedData) {
     console.log(storedData);
-  },*/
+  }, */
 
   /* relations: {
     relationName: 'columnName',
