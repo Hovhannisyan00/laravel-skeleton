@@ -71,13 +71,17 @@ class CRUDGeneratorInit
         $plural = Str::plural($this->arguments['className']);
 
         $textMessage = "
-<fg=yellow>Please don't forget put this codes</>
+<fg=yellow>Please don't forget to add these codes.</>
 <fg=blue>1) </>
 <fg=green>I{$this->arguments['className']}Repository::class => {$this->arguments['className']}Repository::class,</> <fg=yellow>in RepositoryServiceProvider \$singletons array.</>
 <fg=blue>2) </>
 <fg=green>// $plural
 Route::resource('$routeName', {$this->arguments['className']}Controller::class);
 Route::get('$routeName/dataTable/get-list', [{$this->arguments['className']}Controller::class, 'getListData'])->name('$routeName.getListData');</> <fg=yellow>in dashboard.php</>";
+
         $this->consoleOutput->writeln($textMessage);
+        $this->consoleOutput->writeln('
+<fg=yellow>Please add new menu array in MenuSeeder and after that run this command.</>
+<fg=green>php artisan db:seed --class="Database\Seeders\Menu\MenuSeeder"</>');
     }
 }
