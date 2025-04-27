@@ -49,7 +49,7 @@
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <x-dashboard.form._show_status
-                                        :value="$showStatus ?? ''"
+                                        :value="$showStatus"
                                     />
                                 </div>
                             </div>
@@ -64,7 +64,7 @@
                              id="{{$tabLocalId}}__{{$localeCode}}" role="tabpanel" aria-labelledby="{{$localeCode}}">
 
                             {{  $renderMlHtml($mlTabsData, $localeCode, $attributes['mlData'] ?: []) }}
-                            @if($mlTabsData->attributes['addCopyButtons'] === null)
+                            @if($attributes['copyMlButton'] ?? true)
                                 <div class="form-group">
                                     <div class="copy-ml-buttons">
                                         @foreach(getSupportedLocales() as $supportedLocal)
@@ -74,7 +74,7 @@
                                             <button type="button" class="btn btn-success copy-ml-info-btn"
                                                     data-current-lang-code="{{$localeCode}}"
                                                     data-to-lang-code="{{$supportedLocal}}"
-                                                    data-to-lang-code="{{$supportedLocal}}">{{trans('button.info.copy.to.'.$supportedLocal)}}</button>
+                                                    data-to-lang-code="{{$supportedLocal}}">{{trans('button.copy_ml_info')}}</button>
                                         @endforeach
                                     </div>
                                 </div>
