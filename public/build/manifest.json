@@ -37,27 +37,19 @@
     "file": "assets/_commonjsHelpers.js",
     "name": "_commonjsHelpers"
   },
-  "_bootstrap-legacy.js": {
-    "file": "assets/bootstrap-legacy.js",
-    "name": "bootstrap",
+  "_dashboard-init-legacy.js": {
+    "file": "assets/dashboard-init-legacy.js",
+    "name": "dashboard-init",
     "imports": [
       "__commonjsHelpers-legacy.js"
     ]
   },
-  "_bootstrap.js": {
-    "file": "assets/bootstrap.js",
-    "name": "bootstrap",
+  "_dashboard-init.js": {
+    "file": "assets/dashboard-init.js",
+    "name": "dashboard-init",
     "imports": [
       "__commonjsHelpers.js"
     ]
-  },
-  "_dashboard-init-legacy.js": {
-    "file": "assets/dashboard-init-legacy.js",
-    "name": "dashboard-init"
-  },
-  "_dashboard-init.js": {
-    "file": "assets/dashboard-init.js",
-    "name": "dashboard-init"
   },
   "_tab-legacy.js": {
     "file": "assets/tab-legacy.js",
@@ -72,14 +64,6 @@
     "imports": [
       "__commonjsHelpers.js"
     ]
-  },
-  "_vue.esm-bundler-legacy.js": {
-    "file": "assets/vue.esm-bundler-legacy.js",
-    "name": "vue.esm-bundler"
-  },
-  "_vue.esm-bundler.js": {
-    "file": "assets/vue.esm-bundler.js",
-    "name": "vue.esm-bundler"
   },
   "resources/fonts/Flaticon.eot": {
     "file": "assets/Flaticon.eot",
@@ -117,23 +101,13 @@
     "file": "assets/app-legacy.js",
     "name": "app",
     "src": "resources/js/app-legacy.js",
-    "isEntry": true,
-    "imports": [
-      "_bootstrap-legacy.js",
-      "_vue.esm-bundler-legacy.js",
-      "__commonjsHelpers-legacy.js"
-    ]
+    "isEntry": true
   },
   "resources/js/app.js": {
     "file": "assets/app.js",
     "name": "app",
     "src": "resources/js/app.js",
-    "isEntry": true,
-    "imports": [
-      "_bootstrap.js",
-      "_vue.esm-bundler.js",
-      "__commonjsHelpers.js"
-    ]
+    "isEntry": true
   },
   "resources/js/bundle-legacy.js": {
     "file": "assets/bundle-legacy.js",
@@ -144,9 +118,7 @@
       "_dashboard-init-legacy.js",
       "_tab-legacy.js",
       "__commonjsHelpers-legacy.js",
-      "_Modal-legacy.js",
-      "_bootstrap-legacy.js",
-      "resources/js/common/main-legacy.js"
+      "_Modal-legacy.js"
     ]
   },
   "resources/js/bundle.js": {
@@ -158,22 +130,8 @@
       "_dashboard-init.js",
       "_tab.js",
       "__commonjsHelpers.js",
-      "_Modal.js",
-      "_bootstrap.js",
-      "resources/js/common/main.js"
+      "_Modal.js"
     ]
-  },
-  "resources/js/common/main-legacy.js": {
-    "file": "assets/main-legacy.js",
-    "name": "main",
-    "src": "resources/js/common/main-legacy.js",
-    "isEntry": true
-  },
-  "resources/js/common/main.js": {
-    "file": "assets/main.js",
-    "name": "main",
-    "src": "resources/js/common/main.js",
-    "isEntry": true
   },
   "resources/js/dashboard/crud/article/index-legacy.js": {
     "file": "assets/index-legacy.js",
@@ -194,7 +152,7 @@
     ]
   },
   "resources/js/dashboard/crud/article/main-legacy.js": {
-    "file": "assets/main-legacy2.js",
+    "file": "assets/main-legacy.js",
     "name": "main",
     "src": "resources/js/dashboard/crud/article/main-legacy.js",
     "isEntry": true,
@@ -206,7 +164,7 @@
     ]
   },
   "resources/js/dashboard/crud/article/main.js": {
-    "file": "assets/main2.js",
+    "file": "assets/main.js",
     "name": "main",
     "src": "resources/js/dashboard/crud/article/main.js",
     "isEntry": true,
@@ -218,7 +176,7 @@
     ]
   },
   "resources/js/dashboard/crud/profile/main-legacy.js": {
-    "file": "assets/main-legacy3.js",
+    "file": "assets/main-legacy2.js",
     "name": "main",
     "src": "resources/js/dashboard/crud/profile/main-legacy.js",
     "isEntry": true,
@@ -229,7 +187,7 @@
     ]
   },
   "resources/js/dashboard/crud/profile/main.js": {
-    "file": "assets/main3.js",
+    "file": "assets/main2.js",
     "name": "main",
     "src": "resources/js/dashboard/crud/profile/main.js",
     "isEntry": true,
@@ -258,7 +216,7 @@
     ]
   },
   "resources/js/dashboard/crud/user/main-legacy.js": {
-    "file": "assets/main-legacy4.js",
+    "file": "assets/main-legacy3.js",
     "name": "main",
     "src": "resources/js/dashboard/crud/user/main-legacy.js",
     "isEntry": true,
@@ -269,7 +227,7 @@
     ]
   },
   "resources/js/dashboard/crud/user/main.js": {
-    "file": "assets/main4.js",
+    "file": "assets/main3.js",
     "name": "main",
     "src": "resources/js/dashboard/crud/user/main.js",
     "isEntry": true,
@@ -280,41 +238,21 @@
     ]
   },
   "resources/js/dashboard/dashboard-app-legacy.js": {
-    "file": "assets/dashboard-app-legacy.js",
+    "file": "assets/dashboard-app-legacy2.js",
     "name": "dashboard-app",
     "src": "resources/js/dashboard/dashboard-app-legacy.js",
     "isEntry": true,
     "imports": [
-      "_bootstrap-legacy.js",
       "_dashboard-init-legacy.js",
       "__commonjsHelpers-legacy.js"
     ]
   },
-  "resources/js/dashboard/dashboard-app-vue-legacy.js": {
-    "file": "assets/dashboard-app-vue-legacy.js",
-    "name": "dashboard-app-vue",
-    "src": "resources/js/dashboard/dashboard-app-vue-legacy.js",
-    "isEntry": true,
-    "imports": [
-      "_vue.esm-bundler-legacy.js"
-    ]
-  },
-  "resources/js/dashboard/dashboard-app-vue.js": {
-    "file": "assets/dashboard-app-vue.js",
-    "name": "dashboard-app-vue",
-    "src": "resources/js/dashboard/dashboard-app-vue.js",
-    "isEntry": true,
-    "imports": [
-      "_vue.esm-bundler.js"
-    ]
-  },
   "resources/js/dashboard/dashboard-app.js": {
-    "file": "assets/dashboard-app.js",
+    "file": "assets/dashboard-app2.js",
     "name": "dashboard-app",
     "src": "resources/js/dashboard/dashboard-app.js",
     "isEntry": true,
     "imports": [
-      "_bootstrap.js",
       "_dashboard-init.js",
       "__commonjsHelpers.js"
     ]
@@ -342,7 +280,7 @@
     "isEntry": true
   },
   "resources/sass/dashboard/dashboard-app-legacy.scss": {
-    "file": "assets/dashboard-app-legacy2.js",
+    "file": "assets/dashboard-app-legacy.js",
     "name": "dashboard-app",
     "src": "resources/sass/dashboard/dashboard-app-legacy.scss",
     "isEntry": true,

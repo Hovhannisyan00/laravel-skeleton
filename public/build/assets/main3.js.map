@@ -1,1 +1,1 @@
-{"version":3,"file":"main3.js","sources":["../../../resources/js/dashboard/crud/profile/main.js"],"sourcesContent":["import {FormRequest} from \"../../../core/FormRequest.js\";\n\nnew FormRequest();\n"],"names":["FormRequest"],"mappings":"uKAEA,IAAIA"}
+{"version":3,"file":"main3.js","sources":["../../../resources/js/dashboard/crud/user/main.js"],"sourcesContent":["// eslint-disable-next-line no-undef,no-new\nimport {FormRequest} from \"../../../core/FormRequest.js\";\n\nnew FormRequest();\n"],"names":["FormRequest"],"mappings":"uKAGA,IAAIA"}

@@ -22,7 +22,8 @@
                     </x-dashboard.form.modals._modal>
 
                     <!-- Button trigger info modal -->
-                    <button type="button" class="btn btn-success mb-4" data-bs-toggle="modal" data-bs-target="#infoModal">
+                    <button type="button" class="btn btn-success mb-4" data-bs-toggle="modal"
+                            data-bs-target="#infoModal">
                         Launch info modal
                     </button>
 
@@ -37,41 +38,48 @@
 
                             <div class="form-group required">
                                 <x-dashboard.form.uploader._file
-                                        name="photo"
-                                        :configKey="$article->getFileConfigName()"
-                                        :value="$article->photo"
+                                    name="photo"
+                                    :configKey="$article->getFileConfigName()"
+                                    :value="$article->photo"
                                 />
                             </div>
                         </div>
 
                         <div class="col-lg-6">
                             <div class="form-group required">
-                                <x-dashboard.form._date name="publish_date" class="datepicker" :value="$article->publish_date"/>
+                                <x-dashboard.form._date name="publish_date" class="datepicker"
+                                                        :value="$article->publish_date"/>
                             </div>
 
                             <div class="form-group required">
-                                <x-dashboard.form._date dateTime name="release_date_time" class="datetimepicker" :value="$article->release_date_time"/>
+                                <x-dashboard.form._date dateTime name="release_date_time" class="datetimepicker"
+                                                        :value="$article->release_date_time"/>
                             </div>
                         </div>
                     </div>
 
                     {{-- Multiple Group --}}
-                    <x-dashboard.form.multiple-group class="grouped" :multipleData="$article->multiple_group_data ?? []">
+                    <x-dashboard.form.multiple-group class="grouped"
+                                                     :multipleData="$article->multiple_group_data ?? []">
 
                         <div class="form-group col-lg-12">
-                            <x-dashboard.form._input_multiple title="grouped_title" noLabel dataName="title" name="multiple_group_data[0][title]"/>
+                            <x-dashboard.form._input_multiple title="grouped_title" noLabel dataName="title"
+                                                              name="multiple_group_data[0][title]"/>
                         </div>
 
                         <div class="form-group col-lg-12">
-                            <x-dashboard.form._input_multiple title="grouped_link" noLabel dataName="link" name="multiple_group_data[0][link]"/>
+                            <x-dashboard.form._input_multiple title="grouped_link" noLabel dataName="link"
+                                                              name="multiple_group_data[0][link]"/>
                         </div>
 
                         <div class="form-group col-lg-12">
-                            <x-dashboard.form._textarea rows="2" title="grouped_desc" noLabel dataName="desc" name="multiple_group_data[0][desc]"/>
+                            <x-dashboard.form._textarea rows="2" title="grouped_desc" noLabel dataName="desc"
+                                                        name="multiple_group_data[0][desc]"/>
                         </div>
 
                         <div class="form-group col-lg-12">
-                            <x-dashboard.form._select title="grouped_user" allowClear :data="$users" noLabel dataName="user" class="select2"
+                            <x-dashboard.form._select title="grouped_user" allowClear :data="$users" noLabel
+                                                      dataName="user" class="select2"
                                                       defaultOption
                                                       name="multiple_group_data[0][user]"/>
                         </div>
@@ -79,10 +87,12 @@
                     </x-dashboard.form.multiple-group>
 
                     {{-- Multiple --}}
-                    <x-dashboard.form.multiple-group class="content-group" :multipleData="$article->multiple_author ?? []">
+                    <x-dashboard.form.multiple-group class="content-group"
+                                                     :multipleData="$article->multiple_author ?? []">
 
                         <div class="form-group col-lg-12">
-                            <x-dashboard.form._input_multiple title="multiple_author" noLabel name="multiple_author[0]"/>
+                            <x-dashboard.form._input_multiple title="multiple_author" noLabel
+                                                              name="multiple_author[0]"/>
                         </div>
 
                     </x-dashboard.form.multiple-group>
@@ -109,11 +119,8 @@
             </x-dashboard.form._form_ml>
         </div>
     </div>
-
     <x-slot name="scripts">
-{{--        <script type="module" src="{{ asset('/js/dashboard/article/main.js') }}"></script>--}}
         @vite('resources/js/dashboard/crud/article/main.js')
-
     </x-slot>
 </x-dashboard.layouts.app>
 

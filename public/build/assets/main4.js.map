@@ -1,1 +1,0 @@
-{"version":3,"file":"main4.js","sources":["../../../resources/js/dashboard/crud/user/main.js"],"sourcesContent":["import {FormRequest} from \"../../../core/FormRequest.js\";\n\nnew FormRequest();\n"],"names":["FormRequest"],"mappings":"uKAEA,IAAIA"}

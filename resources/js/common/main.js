@@ -39,7 +39,8 @@ window.showErrorMessage = function (message) {
     allowToastClose: false,
   });
 };
-function select2Init (div = undefined, className = 'select2') {
+
+function select2Init(div = undefined, className = 'select2') {
   let select2 = $(`select.${className}`);
   if (typeof div !== 'undefined') {
     select2 = div.find(`select.${className}`);
@@ -54,20 +55,23 @@ function select2Init (div = undefined, className = 'select2') {
     });
   });
 
-};
+}
+
 function select2Reset(select) {
   if (select.length) {
     select.select2('val', '');
     select.find('option').not(':first-child').remove();
   }
 
-};
-function select2SetValues (select, data) {
+}
+
+function select2SetValues(select, data) {
   $.each(data, (key, value) => {
     select.append(new Option(value, key, false, false)).trigger('change.select2');
   });
 
-};
+}
+
 function disableField(field, disable) {
   if (typeof disable === 'undefined') {
     disable = true;
@@ -75,15 +79,16 @@ function disableField(field, disable) {
   }
   field.prop('disabled', disable);
 
-};
-function loadContent (content, removeLoad) {
+}
+
+function loadContent(content, removeLoad) {
   if (typeof removeLoad === 'undefined') {
     content.addClass('loading-content position-relative');
   } else {
     content.removeClass('loading-content position-relative');
   }
 
-};
+}
 
 function minimizeMenu() {
   $('.brand-toggle').click(() => {
@@ -94,12 +99,18 @@ function minimizeMenu() {
     $('.open-menu').toggleClass('open-menu-opened');
   });
 }
+
 // ClassicEditor
 
-function ckEditorInit() {
-  const ckeditorEls = document.querySelectorAll('.ckeditor5');
+function ckEditorInit(selector = '.ckeditor5') {
+  const ckeditorEls = document.querySelectorAll(selector);
+
+  window.CKEditors = window.CKEditors || {};
 
   ckeditorEls.forEach((item) => {
+    const id = item.getAttribute('id');
+    if (!id) return;
+
     ClassicEditor.create(item, {
       cloudServices: {
         tokenUrl: 'https://33333.cke-cs.com/token/dev/ijrDsqFix838Gh3wGO3F77FSW94BwcLXprJ4APSp3XQ26xsUHTi0jcb1hoBt',
@@ -107,19 +118,22 @@ function ckEditorInit() {
       },
     })
       .then((editor) => {
-        if ($(item).attr('disabled')) {
+        if (item.hasAttribute('disabled')) {
           editor.isReadOnly = true;
         }
 
-        editor.model.document.on('change:data', (evt, data) => {
+        editor.model.document.on('change:data', () => {
           editor.updateSourceElement();
         });
+
+        window.CKEditors[id] = editor;
       })
       .catch((error) => {
         console.error(error);
       });
   });
 }
+
 
 function datepickerInit() {
   const datepickerInputs = $('.datepicker');
@@ -186,7 +200,6 @@ function copyMlInfo() {
 
       $.each(currentTabData, function () {
         const inputName = $(this).attr('name');
-
         if (inputName) {
           const toInputName = inputName.replace(self.data('current-lang-code'), self.data('to-lang-code'));
           const toInput = toTabData.find(`*[name="${toInputName}"]`);
@@ -195,14 +208,21 @@ function copyMlInfo() {
             // @todo ckeditor set val
             if (toInput.hasClass('ckeditor5')) {
               // toInput.ckeditor5().setData($(this).val());
+              const id = toInput.attr('id');
+              const editor = window.CKEditors[id];
+
+              if (editor) {
+                editor.setData($(this).val());
+              }
             } else {
               toInput.val($(this).val());
             }
           }
 
+          showSuccessMessage('Copy ML info success')
           setTimeout(() => {
             self.prop('disabled', false);
-          }, 120);
+          }, 200);
         }
       });
     });

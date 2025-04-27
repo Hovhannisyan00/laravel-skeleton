@@ -1,2 +1,2 @@
-import{F as n}from"./FormRequest.js";import{M as o}from"./Modal.js";import"./tab.js";import"./_commonjsHelpers.js";function i(){import.meta.url,import("_").catch(()=>1),async function*(){}().next()}new n;const t=new o("infoModal");$(function(){a()});function a(){t.afterShow(function(){}),t.afterHide(function(){}),t.save(function(e){t.getModalElement(),alert("Saved!"),t.hide()}),t.cancel(function(e){t.getModalElement(),alert("Canceled!")})}export{i as __vite_legacy_guard};
+import{F as t}from"./FormRequest.js";import"./tab.js";import"./_commonjsHelpers.js";function o(){import.meta.url,import("_").catch(()=>1),async function*(){}().next()}new t({});export{o as __vite_legacy_guard};
 //# sourceMappingURL=main2.js.map

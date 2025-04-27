@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import {defineConfig} from 'vite';
 import laravel from 'laravel-vite-plugin';
 import viteLegacyPlugin from '@vitejs/plugin-legacy';
 import inputFiles from './vite.inputs.js';
@@ -65,6 +65,7 @@ export default defineConfig({
   build: {
     sourcemap: true,
     chunkSizeWarningLimit: 2000,
+    minify: 'esbuild',
 
     rollupOptions: {
       output: {
