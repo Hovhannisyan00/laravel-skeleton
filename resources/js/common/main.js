@@ -5,15 +5,15 @@ $(function () {
 
   datetimePickerInit();
 
-  ckEditorInit();
-
   openMenu();
 
   copyMlInfo();
 
+  minimizeMenu();
+
   responseMessage();
 
-  minimizeMenu();
+  ckEditorInit();
 });
 window.showSuccessMessage = function (message) {
   $.toast({
@@ -39,7 +39,6 @@ window.showErrorMessage = function (message) {
     allowToastClose: false,
   });
 };
-
 function select2Init(div = undefined, className = 'select2') {
   let select2 = $(`select.${className}`);
   if (typeof div !== 'undefined') {
@@ -100,16 +99,23 @@ function minimizeMenu() {
   });
 }
 
-// ClassicEditor
 
 function ckEditorInit(selector = '.ckeditor5') {
   const ckeditorEls = document.querySelectorAll(selector);
-
   window.CKEditors = window.CKEditors || {};
 
   ckeditorEls.forEach((item) => {
     const id = item.getAttribute('id');
-    if (!id) return;
+    if (!id || window.CKEditors[id]) return; // не пересоздаём
+
+    // временно показываем скрытый элемент
+    const parentTab = item.closest('.tab-pane');
+    const wasHidden = parentTab && parentTab.classList.contains('fade');
+
+    if (wasHidden) {
+      parentTab.classList.remove('fade');
+      parentTab.style.display = 'block';
+    }
 
     ClassicEditor.create(item, {
       cloudServices: {
@@ -127,12 +133,19 @@ function ckEditorInit(selector = '.ckeditor5') {
         });
 
         window.CKEditors[id] = editor;
+
+        // возвращаем таб обратно в скрытие
+        if (wasHidden) {
+          parentTab.style.display = '';
+          parentTab.classList.add('fade');
+        }
       })
       .catch((error) => {
         console.error(error);
       });
   });
 }
+
 
 
 function datepickerInit() {
@@ -193,38 +206,38 @@ function copyMlInfo() {
   if (copyMlButton.length) {
     copyMlButton.click(function () {
       const self = $(this);
-      const currentTabData = self.closest('.tab-pane').find(':input');
-      const toTabData = $(`#__mls__tab__${self.data('to-lang-code')}`);
+      const supportedLocales = self.data('supported-locales');
 
-      self.prop('disabled', true);
+      const currentTab = $('.tab-pane.active');
+      const currentTabInputs = currentTab.find(':input');
+      const currentLangCode = currentTab.attr('id').split('__').pop();
 
-      $.each(currentTabData, function () {
-        const inputName = $(this).attr('name');
-        if (inputName) {
-          const toInputName = inputName.replace(self.data('current-lang-code'), self.data('to-lang-code'));
-          const toInput = toTabData.find(`*[name="${toInputName}"]`);
+      supportedLocales.forEach(function (localeCode) {
+        if (localeCode !== currentLangCode) {
+          const toTab = $(`#__mls__tab__${localeCode}`);
+          $.each(currentTabInputs, function () {
+            const inputName = $(this).attr('name');
+            if (inputName) {
+              const toInputName = inputName.replace(`[${currentLangCode}]`, `[${localeCode}]`);
+              const toInput = toTab.find(`*[name="${toInputName}"]`);
+              if (toInput.length) {
+                if (toInput.hasClass('ckeditor5')) {
+                  const id = toInput.attr('id');
+                  const editor = window.CKEditors[id];
+                  if (editor) {
 
-          if (toInput.length) {
-            // @todo ckeditor set val
-            if (toInput.hasClass('ckeditor5')) {
-              // toInput.ckeditor5().setData($(this).val());
-              const id = toInput.attr('id');
-              const editor = window.CKEditors[id];
-
-              if (editor) {
-                editor.setData($(this).val());
+                    editor.setData($(this).val());
+                  }
+                } else {
+                  toInput.val($(this).val());
+                }
               }
-            } else {
-              toInput.val($(this).val());
             }
-          }
-
-          showSuccessMessage('Copy ML info success')
-          setTimeout(() => {
-            self.prop('disabled', false);
-          }, 200);
+          });
         }
       });
+
+      showSuccessMessage('Copy ML info success');
     });
   }
 }

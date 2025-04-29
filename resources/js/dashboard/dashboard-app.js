@@ -1,16 +1,16 @@
-import '../core/bootstrap';
-
-import 'jquery-datetimepicker';
-import 'jquery-toast-plugin';
-
+// Core
+import '../core/bootstrap.js';
+import '../core/dashboard-init.js';
+import '../core/FormRequest.js';
+import '../core/Modal.js';
+import '../core/ConfirmModal.js';
+import '../core/DataTable.js';
+import '../core/MultipleInputs.js';
+import '../core/FileUploader.js';
 import '../core/dashboard-init';
 import '../core/Modal.js';
 
-import '../plugins/select.min';
-import '../plugins/datatables.net';
-import '../plugins/dataTablesBootstrap';
-import '../plugins/jquery.mask.min';
-
+// Common
 import '../common/axios/axios';
 import '../common/axios/errorHandler';
-// import '../common/main.js';
+import '../common/main.js';

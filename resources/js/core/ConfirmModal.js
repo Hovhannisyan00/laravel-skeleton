@@ -8,13 +8,6 @@ class ConfirmModal {
   constructor() {
     this.init();
   }
-
-  // eslint-disable-next-line class-methods-use-this
-  // modalVisible(type = 'show') {
-  //   console.log(12121212);
-  //   $('#d_confirm__modal').modal(type);
-  // }
-
   modalVisible(type = 'show') {
     const modalEl = document.getElementById('d_confirm__modal');
 

@@ -1,18 +1,15 @@
-import _ from 'lodash';
-window._ = _;
-
-import 'bootstrap'; // This will autoload Bootstrap's JavaScript
-
 import $ from 'jquery';
-import Popper from 'popper.js';
+import { createPopper } from '@popperjs/core';
+import _ from 'lodash';
+import axios from 'axios';
+import 'bootstrap';
 
-window.Popper = Popper;
 window.$ = window.jQuery = $;
+window._ = _;
+window.axios = axios;
+window.Popper = { createPopper };
 
 // If you're using axios for HTTP requests:
-import axios from 'axios';
-window.axios = axios;
-
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 // Optional: If you're using Laravel Echo and Pusher

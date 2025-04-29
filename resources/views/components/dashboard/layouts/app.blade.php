@@ -6,15 +6,13 @@
     <title>{{config('app.name')}}</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 
-    {{-- CKEditor --}}
-    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
-
-
     {{-- Core Js  --}}
     @vite(['resources/js/dashboard/dashboard-app.js'])
     @vite(['resources/js/bundle.js'])
 
+    {{-- CKEditor --}}
     <script src="{{ asset('plugins/moment/moment.min.js') }}"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
 
     {{-- Token --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">

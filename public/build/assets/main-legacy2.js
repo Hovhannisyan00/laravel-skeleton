@@ -1,2 +1,2 @@
-System.register(["./FormRequest-legacy.js","./tab-legacy.js","./_commonjsHelpers-legacy.js"],(function(e,s){"use strict";var t;return{setters:[e=>{t=e.F},null,null],execute:function(){new t({})}}}));
+System.register(["./FormRequest-legacy.js","./tab-legacy.js"],(function(e,t){"use strict";var s;return{setters:[e=>{s=e.F},null],execute:function(){new s({})}}}));
 //# sourceMappingURL=main-legacy2.js.map

@@ -67,15 +67,12 @@
                             @if($attributes['copyMlButton'] ?? true)
                                 <div class="form-group">
                                     <div class="copy-ml-buttons">
-                                        @foreach(getSupportedLocales() as $supportedLocal)
-                                            @if($localeCode == $supportedLocal)
-                                                @continue
-                                            @endif
-                                            <button type="button" class="btn btn-success copy-ml-info-btn"
-                                                    data-current-lang-code="{{$localeCode}}"
-                                                    data-to-lang-code="{{$supportedLocal}}"
-                                                    data-to-lang-code="{{$supportedLocal}}">{{trans('button.copy_ml_info')}}</button>
-                                        @endforeach
+                                        <button type="button"
+                                                class="btn btn-success copy-ml-info-btn"
+                                                data-supported-locales='@json(array_keys(LaravelLocalization::getSupportedLocales()))'>
+                                            {{ trans('button.copy_ml_info') }}
+                                        </button>
+
                                     </div>
                                 </div>
                             @endif

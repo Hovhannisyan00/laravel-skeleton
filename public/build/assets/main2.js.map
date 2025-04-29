@@ -1,1 +1,1 @@
-{"version":3,"file":"main2.js","sources":["../../../resources/js/dashboard/crud/profile/main.js"],"sourcesContent":["import { FormRequest } from '../../../core/FormRequest.js';\n\nnew FormRequest({});\n"],"names":["FormRequest"],"mappings":"uKAEA,IAAIA,EAAY,CAAA,CAAE"}
+{"version":3,"file":"main2.js","sources":["../../../resources/js/dashboard/crud/profile/main.js"],"sourcesContent":["import { FormRequest } from '../../../core/FormRequest.js';\n\nnew FormRequest({});\n"],"names":["FormRequest"],"mappings":"yIAEA,IAAIA,EAAY,CAAA,CAAE"}

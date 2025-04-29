@@ -1,14 +1,10 @@
-// Core
-import './core/dashboard-init.js';
-import './core/FormRequest.js';
-import './core/Modal.js';
-import './core/ConfirmModal.js';
-import './core/DataTable.js';
-import './core/MultipleInputs.js';
-import './core/FileUploader.js';
-import './core/bootstrap.js';
-import './dashboard/plugins/croppie/croppie.min.js';
+// Jquery
+import 'jquery-datetimepicker';
+import 'jquery-toast-plugin';
 
 // Plugins
-import './plugins/ckeditor.js';
-import './common/main.js';
+import './plugins/jquery.mask.min';
+import './plugins/select.min';
+import './plugins/datatables.net';
+import './plugins/dataTablesBootstrap';
+import './plugins/croppie.min.js';
