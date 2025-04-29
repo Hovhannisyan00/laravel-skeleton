@@ -2,12 +2,10 @@
 import '../core/bootstrap.js';
 import '../core/dashboard-init.js';
 import '../core/FormRequest.js';
-import '../core/Modal.js';
 import '../core/ConfirmModal.js';
 import '../core/DataTable.js';
 import '../core/MultipleInputs.js';
 import '../core/FileUploader.js';
-import '../core/dashboard-init';
 import '../core/Modal.js';
 
 // Common

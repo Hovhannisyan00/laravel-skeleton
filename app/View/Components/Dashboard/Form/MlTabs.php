@@ -36,6 +36,7 @@ class MlTabs extends Base
     private function find(DOMXPath $xpath, string $selector, string $attribute = self::ATTRIBUTE_NAME): void
     {
         $elements = $xpath->query($selector);
+        $this->changeIdAndLabelFor($xpath, $elements);
         $this->changeNameAndSetValue($elements, $attribute);
     }
 
@@ -65,6 +66,21 @@ class MlTabs extends Base
             }
 
             $input->setAttribute($attribute, $newValue);
+        }
+    }
+
+    private function changeIdAndLabelFor($xpath, $inputs): void
+    {
+        foreach ($inputs as $input) {
+
+            $inputId = $input->getAttribute('id');
+            if ($inputId) {
+                $newId = $input->getAttribute('name') . '_' . rand();
+                $label = $xpath->query("//label[@for='$inputId']")->item(0);
+
+                $label->setAttribute('for', $newId);
+                $input->setAttribute('id', $newId);
+            }
         }
     }
 

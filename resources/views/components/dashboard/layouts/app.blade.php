@@ -10,8 +10,10 @@
     @vite(['resources/js/dashboard/dashboard-app.js'])
     @vite(['resources/js/bundle.js'])
 
-    {{-- CKEditor --}}
+    {{-- Moment --}}
     <script src="{{ asset('plugins/moment/moment.min.js') }}"></script>
+
+    {{-- CKEditor --}}
     <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
 
     {{-- Token --}}

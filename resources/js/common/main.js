@@ -106,14 +106,12 @@ function ckEditorInit(selector = '.ckeditor5') {
 
   ckeditorEls.forEach((item) => {
     const id = item.getAttribute('id');
-    if (!id || window.CKEditors[id]) return; // не пересоздаём
+    if (!id || window.CKEditors[id]) return;
 
-    // временно показываем скрытый элемент
     const parentTab = item.closest('.tab-pane');
-    const wasHidden = parentTab && parentTab.classList.contains('fade');
+    const wasHidden = parentTab && parentTab.style.display !== 'block';
 
-    if (wasHidden) {
-      parentTab.classList.remove('fade');
+    if (parentTab && wasHidden) {
       parentTab.style.display = 'block';
     }
 
@@ -134,14 +132,12 @@ function ckEditorInit(selector = '.ckeditor5') {
 
         window.CKEditors[id] = editor;
 
-        // возвращаем таб обратно в скрытие
-        if (wasHidden) {
+        if (parentTab && wasHidden) {
           parentTab.style.display = '';
-          parentTab.classList.add('fade');
         }
       })
       .catch((error) => {
-        console.error(error);
+        console.error('CKEditor error: ', error);
       });
   });
 }
@@ -216,20 +212,38 @@ function copyMlInfo() {
         if (localeCode !== currentLangCode) {
           const toTab = $(`#__mls__tab__${localeCode}`);
           $.each(currentTabInputs, function () {
-            const inputName = $(this).attr('name');
+            const input = $(this);
+            const inputName = input.attr('name');
+            const inputId = input.attr('id');
+
             if (inputName) {
               const toInputName = inputName.replace(`[${currentLangCode}]`, `[${localeCode}]`);
               const toInput = toTab.find(`*[name="${toInputName}"]`);
-              if (toInput.length) {
-                if (toInput.hasClass('ckeditor5')) {
-                  const id = toInput.attr('id');
-                  const editor = window.CKEditors[id];
-                  if (editor) {
 
-                    editor.setData($(this).val());
+              if (toInput.length) {
+                const isCKEditor = input.hasClass('ckeditor5') && window.CKEditors && window.CKEditors[inputId];
+
+                if (isCKEditor) {
+                  const sourceEditor = window.CKEditors[inputId];
+                  const sourceData = sourceEditor.getData();
+
+                  const toId = toInput.attr('id');
+                  const targetEditor = window.CKEditors[toId];
+
+                  if (targetEditor) {
+                    targetEditor.setData(sourceData);
+                  } else {
+                    ckEditorInit();
+                    setTimeout(() => {
+                      const retryEditor = window.CKEditors[toId];
+                      if (retryEditor) {
+                        retryEditor.setData(sourceData);
+                      }
+                    }, 500);
                   }
+
                 } else {
-                  toInput.val($(this).val());
+                  toInput.val(input.val());
                 }
               }
             }
@@ -241,6 +255,7 @@ function copyMlInfo() {
     });
   }
 }
+
 
 function responseMessage() {
   const responseMessageStorage = localStorage.getItem('_message');
